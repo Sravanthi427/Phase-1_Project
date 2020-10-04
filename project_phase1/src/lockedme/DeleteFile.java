@@ -14,7 +14,7 @@ public class DeleteFile {
 public static void deleteFile()
 {
 
-	String fname, str;
+	String fname;
 	Scanner scan = new Scanner(System.in);
 	
 	System.out.println("Enter file name to be deleted: ");

@@ -8,9 +8,7 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		int ch = 0;
-		int ch1 = 0;
-		boolean innerswitch = false;
-		boolean outerswitch = false;
+		
 
 		System.out.println("Welcome to Company Lockers Project");
 		System.out.println("--------------------------------");
@@ -22,7 +20,7 @@ public class Main {
 			System.out.println("---------------------------------");
 			System.out.println("1)List Files in Ascending order");
 			System.out.println("2)Add File, Delete File and Search File");
-			System.out.println("3)Return to Main Menu");
+			System.out.println("3)Exiting Application");
 			System.out.println("Please enter your appropriate choice(1-3)");
 			
 			try {

@@ -1,9 +1,11 @@
 package lockedme;
 
-import java.io.FileNotFoundException;
+import java.io.File;
+
 
 //Code to add file in the root folder
-import java.io.FileOutputStream;  
+
+import java.io.IOException;
 import java.util.Scanner;  
 public class  AddFile
 {  
@@ -14,14 +16,19 @@ try
 Scanner sc=new Scanner(System.in);           
 System.out.print("Please enter file to be added ");  
 String name=sc.nextLine();              
-FileOutputStream fos=new FileOutputStream("root"+"//"+name, true); 
-System.out.println("           ");
-System.out.println("file saved.");  
-}  
-catch(FileNotFoundException e)  
-{  
-e.getMessage(); 
-System.out.println("Please enter file to be added");
-}  
-}  
-}  
+File fos=new File("root"+"//"+name); 
+boolean fvar = fos.createNewFile();
+if(fvar) {
+	System.out.println("File has been created successfully!");
+}
+else {
+	System.out.println("File is already present");
+}
+}
+catch(IOException e) {
+	System.out.println("Exception occured");
+	e.printStackTrace();
+}
+}
+}
+
